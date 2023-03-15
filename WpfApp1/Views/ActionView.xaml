@@ -1,0 +1,55 @@
+﻿<Window x:Class="PrintingHouseApplication.Views.ActionView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PrintingHouseApplication.Views"
+        xmlns:vm="clr-namespace:PrintingHouseApplication.ViewModels"
+        xmlns:ctrl="clr-namespace:PrintingHouseApplication.Views.Controls"
+        mc:Ignorable="d"
+        Title="Модуль работы с данными" Height="450" Width="625">
+    <Window.DataContext>
+        <vm:ActionViewModel/>
+    </Window.DataContext>
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type vm:AddEmployeeViewModel}">
+            <ctrl:AddEmployeeControl/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:UpdEmployeeViewModel}">
+            <ctrl:UpdEmployeeControl/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:AddDepartmentViewModel}">
+            <ctrl:AddDepartmentControl/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:UpdDepartmentViewModel}">
+            <ctrl:UpdDepartmentControl/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:AddTypeProdViewModel}">
+            <ctrl:AddTypeProdControl/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:UpdTypeProdViewModel}">
+            <ctrl:UpdTypeProdControl/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:AddProductViewModel}">
+            <ctrl:AddProductControl/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:UpdProductViewModel}">
+            <ctrl:UpdProductControl/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:AddContractViewModel}">
+            <ctrl:AddContractControl/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:UpdContractViewModel}">
+            <ctrl:UpdContractControl/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:AddUserViewModel}">
+            <ctrl:AddUserControl/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:UpdUserViewModel}">
+            <ctrl:UpdUserControl/>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid>
+        <ContentControl Content="{Binding SelectedViewModel}"/>
+    </Grid>
+</Window>

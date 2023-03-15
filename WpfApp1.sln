@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1972
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintingHouseApplication", "WpfApp1\PrintingHouseApplication.csproj", "{5F921654-149D-48D7-AB91-291EB321F33F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F921654-149D-48D7-AB91-291EB321F33F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F921654-149D-48D7-AB91-291EB321F33F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F921654-149D-48D7-AB91-291EB321F33F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F921654-149D-48D7-AB91-291EB321F33F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7A37CFE7-F625-43B2-9607-D2CEE856CFA0}
+	EndGlobalSection
+EndGlobal

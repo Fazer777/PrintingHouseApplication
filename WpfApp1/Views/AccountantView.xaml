@@ -1,0 +1,66 @@
+﻿<Window x:Class="PrintingHouseApplication.Views.AccountantView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"        
+        xmlns:chart="clr-namespace:System.Windows.Forms.DataVisualization.Charting;assembly=System.Windows.Forms.DataVisualization"
+        xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        xmlns:local="clr-namespace:PrintingHouseApplication.Views"
+        xmlns:vm="clr-namespace:PrintingHouseApplication.ViewModels"
+        mc:Ignorable="d"
+        Title="Модуль бухгалтера" Height="450" Width="800"
+        Closed="Window_Closed">
+    <Window.DataContext>
+        <vm:ViewModels/>
+    </Window.DataContext>
+    <Grid>
+        <TabControl>
+            <TabItem Header="Профиль"
+                     DataContext="{Binding ProfileVM }">
+                <Grid ShowGridLines="False">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.5*"/>
+                        <RowDefinition Height="6*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="1">
+
+                        <Ellipse Width="200" Height="200" Margin="5">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="{Binding ImgSource}"
+                                Stretch="UniformToFill"/>
+                            </Ellipse.Fill>
+                        </Ellipse>
+
+                        <TextBlock                            
+                            HorizontalAlignment="Center"
+                            Margin="5"
+                            Background="Bisque"
+                            FontSize="15">
+                            <TextBlock.Text>
+                                <MultiBinding StringFormat="{} {0} {1} {2}">
+                                    <Binding Path="CurrentEmployee.Surname"/>
+                                    <Binding Path="CurrentEmployee.Name"/>
+                                    <Binding Path="CurrentEmployee.Patronymic"/>
+                                </MultiBinding>
+                            </TextBlock.Text>
+                        </TextBlock>
+
+                        <Label Content="{Binding EmployeeRole}"
+                               HorizontalContentAlignment="Center"
+                               HorizontalAlignment="Center"
+                               Margin="5"
+                               Background="Bisque"
+                               FontSize="15"/>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Создание отчетов">
+                <StackPanel>
+                    
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
